@@ -1,6 +1,6 @@
 {
 	"bugs": "https://github.com/cedx/esbuild-plugins/issues",
-	"description": "A collection of ESBuild plug-ins.",
+	"description": "A small collection of ESBuild plug-ins.",
 	"homepage": "https://github.com/cedx/esbuild-plugins",
 	"license": "MIT",
 	"name": "@cedx/esbuild-plugins",

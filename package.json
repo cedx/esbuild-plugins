@@ -1,0 +1,46 @@
+{
+	"bugs": "https://github.com/cedx/esbuild-plugins/issues",
+	"description": "A collection of ESBuild plug-ins.",
+	"homepage": "https://github.com/cedx/esbuild-plugins",
+	"license": "MIT",
+	"name": "@cedx/esbuild-plugins",
+	"repository": "cedx/esbuild-plugins",
+	"type": "module",
+	"version": "1.0.0",
+	"author": {
+		"email": "cedric@belin.io",
+		"name": "Cédric Belin",
+		"url": "https://belin.io"
+	},
+	"dependencies": {
+		"minify-html-literals": "^1.3.5"
+	},
+	"devDependencies": {
+		"@coffeelint/cli": "^5.2.11",
+		"@types/gulp": "^4.0.17",
+		"@types/node": "^22.10.5",
+		"coffeescript": "^2.7.0",
+		"gulp": "^5.0.0"
+	},
+	"engines": {
+		"node": ">=22.0.0"
+	},
+	"exports": {
+		"types": "./src/index.d.ts",
+		"default": "./lib/index.js"
+	},
+	"files": [
+		"lib/",
+		"src/"
+	],
+	"keywords": [
+		"esbuild",
+		"plugin"
+	],
+	"peerDependencies": {
+		"esbuild": ">=0.24.0"
+	},
+	"scripts": {
+		"test": "gulp test"
+	}
+}

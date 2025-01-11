@@ -3,8 +3,8 @@ import {fileURLToPath} from "node:url"
 import {packageDirectory} from "pkg-dir"
 
 # Creates a plug-in that dedupes the specified packages.
-export dedupe = (packages...) ->
-	name: "dedupe"
+export dedupePackages = (packages...) ->
+	name: "dedupePackages"
 	setup: (build) ->
 		paths = new Map
 		build.onResolve namespace: "file", filter: new RegExp("^#{packages.join "|"}$"), (args) -> path: paths.get args.path

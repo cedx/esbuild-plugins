@@ -4,8 +4,8 @@ import {EOL} from "node:os"
 import {extname} from "node:path"
 
 # Creates a plug-in that minifies HTML markup inside template literal strings.
-export minifyHtml = ->
-	name: "minifyHtml"
+export minifyHtmlLiterals = ->
+	name: "minifyHtmlLiterals"
 	setup: (build) ->
 		build.onLoad namespace: "file", filter: /\.[jt]s$/i, (args) ->
 			contents = await readFile args.path, "utf8"

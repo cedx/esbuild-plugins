@@ -1,2 +1,2 @@
-export * from "./dedupe.js";
-export * from "./minify_html.js";
+export * from "./dedupe_packages.js";
+export * from "./minify_html_literals.js";

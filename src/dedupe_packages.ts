@@ -5,4 +5,4 @@ import {Plugin} from "esbuild";
  * @param packages The names of the packages to dedupe.
  * @returns The newly created plug-in.
  */
-export function dedupe(...packages: Array<string>): Plugin;
+export function dedupePackages(...packages: Array<string>): Plugin;

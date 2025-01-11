@@ -1,4 +1,4 @@
-# ESBuild Plug-ins
+# ESBuild Plugins
 ![Node.js](https://badgen.net/npm/node/@cedx/esbuild-plugins) ![npm](https://badgen.net/npm/v/@cedx/esbuild-plugins) ![License](https://badgen.net/npm/license/@cedx/esbuild-plugins) ![Downloads](https://badgen.net/npm/dt/@cedx/esbuild-plugins)
 
 A small collection of [ESBuild](https://esbuild.github.io) plug-ins.
@@ -12,4 +12,4 @@ A small collection of [ESBuild](https://esbuild.github.io) plug-ins.
 - [Submit an issue](https://github.com/cedx/esbuild-plugins/issues)
 
 ## License
-[ESBuild Plug-ins](https://github.com/cedx/esbuild-plugins) is distributed under the MIT License.
+[ESBuild Plugins](https://github.com/cedx/esbuild-plugins) is distributed under the MIT License.

@@ -1,7 +1,7 @@
 import {Plugin} from "esbuild";
 
 /**
- * Creates a plugin that minifies HTML markup inside template literal strings.
- * @returns The newly created plugin.
+ * Creates a plug-in that minifies HTML markup inside template literal strings.
+ * @returns The newly created plug-in.
  */
 export function minifyHtml(): Plugin;

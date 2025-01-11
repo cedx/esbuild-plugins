@@ -3,7 +3,7 @@ import {readFile} from "node:fs/promises"
 import {EOL} from "node:os"
 import {extname} from "node:path"
 
-# Creates a plugin that minifies HTML markup inside template literal strings.
+# Creates a plug-in that minifies HTML markup inside template literal strings.
 export minifyHtml = ->
 	name: "minifyHtml"
 	setup: (build) ->

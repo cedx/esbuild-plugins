@@ -4,12 +4,13 @@ import {EOL} from "node:os"
 import {extname} from "node:path"
 
 # Creates a plug-in that minifies HTML markup inside template literal strings.
-export minifyHtmlLiterals = ->
+export minifyHtmlLiterals = (options = {}) ->
 	name: "minifyHtmlLiterals"
 	setup: (build) ->
-		build.onLoad namespace: "file", filter: /\.[jt]s$/i, (args) ->
+		{filter = /\.[jt]s$/i, minifyOptions...} = options
+		build.onLoad namespace: "file", filter: filter, (args) ->
 			contents = await readFile args.path, "utf8"
-			{code, map} = minifyHTMLLiterals(contents) ? code: contents, map: null
+			{code, map} = minifyHTMLLiterals(contents, minifyOptions) ? code: contents, map: null
 			loader: if extname(args.path).toLowerCase() is ".ts" then "ts" else "js"
 			contents: if map then "#{code}#{EOL}//# sourceMappingURL=#{map.toUrl()}" else code
 		return

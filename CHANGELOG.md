@@ -1,6 +1,7 @@
 # Changelog
 
 ## Version [0.3.0](https://github.com/cedx/esbuild-plugins/compare/v0.2.0...v0.3.0)
+- Breaking change: removed the `namespace` filter from the path resolution.
 - Breaking change: renamed the `dedupePackages` plug-in to `dedupeModules`.
 - Breaking change: renamed the `MinifyOptions` type to `MinifyHtmlLiteralsOptions`.
 - Added support for `.cts` and `.mts` file extensions in the `minifyHtmlLiterals` plug-in.

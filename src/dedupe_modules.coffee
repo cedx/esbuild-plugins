@@ -1,7 +1,7 @@
 import process from "node:process"
 import {packageDirectory} from "pkg-dir"
 
-# Creates a plug-in that dedupes the specified packages.
+# Creates a plug-in that dedupes the specified modules.
 export dedupeModules = (modules, options = {}) ->
 	name: "DedupeModules"
 	setup: (build) ->
@@ -9,6 +9,6 @@ export dedupeModules = (modules, options = {}) ->
 		build.onStart ->
 			resolveDir ?= await packageDirectory() or process.cwd()
 			return
-		build.onResolve namespace: "file", filter: new RegExp("^(#{packages.join "|"})(/|$)"), (args) ->
+		build.onResolve filter: new RegExp("^(#{modules.join "|"})(/|$)"), (args) ->
 			await build.resolve args.path, kind: args.kind, resolveDir: resolveDir
 		return

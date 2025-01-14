@@ -5,7 +5,7 @@ import {extname} from "node:path"
 
 # Creates a plug-in that minifies HTML markup inside template literal strings.
 export minifyHtmlLiterals = (options = {}) ->
-	name: "minifyHtmlLiterals"
+	name: "MinifyHtmlLiterals"
 	setup: (build) ->
 		{filter = /\.[jt]s$/i, minifyOptions...} = options
 		tsExtensions = new Set [".cts", ".mts", ".ts", ".tsx"]

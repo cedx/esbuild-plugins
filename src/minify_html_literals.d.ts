@@ -6,12 +6,12 @@ import {Options} from "minify-html-literals";
  * @param options The plug-in options.
  * @returns The newly created plug-in.
  */
-export function minifyHtmlLiterals(options?: PluginOptions): Plugin;
+export function minifyHtmlLiterals(options?: MinifyHtmlLiteralsOptions): Plugin;
 
 /**
  * Defines the options of the {@link minifyHtmlLiterals} plug-in.
  */
-export type PluginOptions = Options & Partial<{
+export type MinifyHtmlLiteralsOptions = Options & Partial<{
 
 	/**
 	 * The pattern indicating which modules to process when the path matches.

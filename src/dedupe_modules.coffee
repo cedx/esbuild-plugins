@@ -3,9 +3,9 @@ import {packageDirectory} from "pkg-dir"
 
 # Creates a plug-in that dedupes the specified packages.
 export dedupeModules = (modules, options = {}) ->
-	name: "dedupeModules"
+	name: "DedupeModules"
 	setup: (build) ->
-		{resolveDir} = options
+		{resolveDir = null} = options
 		build.onStart ->
 			resolveDir ?= await packageDirectory() or process.cwd()
 			return

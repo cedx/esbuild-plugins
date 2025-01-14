@@ -6,12 +6,12 @@ import {Plugin} from "esbuild";
  * @param options The plug-in options.
  * @returns The newly created plug-in.
  */
-export function dedupeModules(modules: Array<string>, options?: PluginOptions): Plugin;
+export function dedupeModules(modules: Array<string>, options?: DedupeModulesOptions): Plugin;
 
 /**
  * Defines the options of the {@link dedupeModules} plug-in.
  */
-export type PluginOptions = Partial<{
+export type DedupeModulesOptions = Partial<{
 
 	/**
 	 * The path of the file system directory to use when resolving an import path.

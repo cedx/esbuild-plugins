@@ -9,6 +9,6 @@ export dedupeModules = (modules, options = {}) ->
 		build.onStart ->
 			resolveDir ?= await packageDirectory() or process.cwd()
 			return
-		build.onResolve filter: new RegExp("^(#{modules.join "|"})(/|$)"), (args) ->
+		build.onResolve namespace: "file", filter: new RegExp("^(#{modules.join "|"})(/|$)"), (args) ->
 			await build.resolve args.path, kind: args.kind, resolveDir: resolveDir
 		return

@@ -8,7 +8,7 @@ export coffeeScript = (options = {}) ->
 	name: "CoffeeScript"
 	setup: (build) ->
 		{filter = /\.(lit)?coffee$/i, compileOptions...} = options
-		build.onLoad {filter}, (args) ->
+		build.onLoad namespace: "file", filter: filter, (args) ->
 			contents = await readFile args.path, "utf8"
 			{js, v3SourceMap} = compile contents, Object.assign compileOptions, sourceMap: on
 			loader: "js"

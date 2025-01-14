@@ -14,7 +14,7 @@ export function dedupeModules(modules: Array<string>, options?: DedupeModulesOpt
 export type DedupeModulesOptions = Partial<{
 
 	/**
-	 * The path of the file system directory to use when resolving an import path.
+	 * The path of the directory to use when resolving an import path.
 	 */
 	resolveDir: string;
 }>;

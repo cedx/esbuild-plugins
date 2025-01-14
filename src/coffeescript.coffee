@@ -4,12 +4,13 @@ import {readFile} from "node:fs/promises"
 import {EOL} from "node:os"
 
 # Creates a plug-in that compiles CoffeeScript files.
-export coffeeScript = ->
-	name: "coffeeScript"
+export coffeeScript = (options = {}) ->
+	name: "CoffeeScript"
 	setup: (build) ->
-		build.onLoad namespace: "file", filter: /\.(lit)?coffee$/i, (args) ->
+		{filter = /\.(lit)?coffee$/i, compileOptions...} = options
+		build.onLoad {filter}, (args) ->
 			contents = await readFile args.path, "utf8"
-			{js, v3SourceMap} = compile contents, sourceMap: on
+			{js, v3SourceMap} = compile contents, Object.assign compileOptions, sourceMap: on
 			loader: "js"
 			contents: "#{js}#{EOL}//# sourceMappingURL=data:application/json;charset=utf-8;base64,#{Buffer.from(v3SourceMap).toString "base64"}"
 		return

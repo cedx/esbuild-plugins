@@ -8,9 +8,10 @@ export minifyHtmlLiterals = (options = {}) ->
 	name: "minifyHtmlLiterals"
 	setup: (build) ->
 		{filter = /\.[jt]s$/i, minifyOptions...} = options
-		build.onLoad namespace: "file", filter: filter, (args) ->
+		tsExtensions = new Set [".cts", ".mts", ".ts", ".tsx"]
+		build.onLoad {filter}, (args) ->
 			contents = await readFile args.path, "utf8"
 			{code, map} = minifyHTMLLiterals(contents, minifyOptions) ? code: contents, map: null
-			loader: if extname(args.path).toLowerCase() is ".ts" then "ts" else "js"
+			loader: if tsExtensions.has extname(args.path).toLowerCase() then "ts" else "js"
 			contents: if map then "#{code}#{EOL}//# sourceMappingURL=#{map.toUrl()}" else code
 		return

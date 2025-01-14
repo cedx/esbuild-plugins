@@ -13,7 +13,7 @@ export function minifyHtmlLiterals(options?: MinifyOptions): Plugin;
 export type MinifyOptions = Options & Partial<{
 
 	/**
-	 * Pattern indicating which modules to process when the path matches.
+	 * The pattern indicating which modules to process when the path matches.
 	 */
 	filter: RegExp;
 }>;

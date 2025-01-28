@@ -14,7 +14,7 @@ export function minifyHtmlLiterals(options: MinifyHtmlLiteralsOptions = {}): Plu
 		name: "MinifyHtmlLiterals",
 		setup: (build) => {
 			const {filter = /\.[jt]s$/i, ...minifyOptions} = options;
-			const tsExtensions = new Set([".cts", ".mts", ".ts"]);
+			const tsExtensions = new Set([".cts", ".mts", ".ts", ".tsx"]);
 			build.onLoad({namespace: "file", filter}, async args => {
 				const contents = await readFile(args.path, "utf8");
 				const {code, map} = minifyHTMLLiterals(contents, minifyOptions) ?? {code: contents, map: null};

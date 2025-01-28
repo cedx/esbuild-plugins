@@ -30,6 +30,6 @@ describe("minifyHtmlLiterals", () => {
 			};
 		`;
 
-		equal(actual.trim(), expected.trim().replace(/\t{3}/g, "").replaceAll("\t", "  "));
+		equal(actual.trim(), expected.replace(/^\t{3}/gm, "").replaceAll("\t", "  ").trim());
 	});
 });

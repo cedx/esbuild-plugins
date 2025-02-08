@@ -19,7 +19,7 @@
 	"devDependencies": {
 		"@types/gulp": "^4.0.17",
 		"@types/node": "^22.13.1",
-		"esbuild": "^0.24.2",
+		"esbuild": "^0.25.0",
 		"gulp": "^5.0.0",
 		"typedoc": "^0.27.6",
 		"typescript": "^5.7.3",
@@ -41,7 +41,7 @@
 		"plugin"
 	],
 	"peerDependencies": {
-		"esbuild": ">=0.24.0"
+		"esbuild": ">=0.25.0"
 	},
 	"publishConfig": {
 		"access": "public"

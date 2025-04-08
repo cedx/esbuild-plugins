@@ -12,7 +12,7 @@ describe("minifyHtmlLiterals", () => {
 	it("should minify `html` template literals from a template", async () => {
 		const bundle = await esbuild.build({
 			bundle: true,
-			entryPoints: [join(import.meta.dirname, "../res/html_template.js")],
+			entryPoints: [join(import.meta.dirname, "../res/HtmlTemplate.js")],
 			external: ["lit"],
 			format: "esm",
 			plugins: [minifyHtmlLiterals()],
@@ -22,7 +22,7 @@ describe("minifyHtmlLiterals", () => {
 		const [{contents}] = bundle.outputFiles;
 		const actual = Buffer.from(contents).toString();
 		const expected = `
-			// res/html_template.js
+			// res/HtmlTemplate.js
 			import { html } from "lit";
 			var htmlTemplate = html\`<p>Bonjour le monde !</p><input type="text"> <button type="button">Bouton</button>\`;
 			export {

@@ -13,7 +13,7 @@
 		"pkg-dir": "^8.0.0"
 	},
 	"devDependencies": {
-		"@types/node": "^24.6.2",
+		"@types/node": "^24.7.0",
 		"esbuild": "^0.25.10",
 		"typedoc": "^0.28.13",
 		"typescript": "^5.9.3",

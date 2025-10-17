@@ -13,8 +13,8 @@
 		"pkg-dir": "^8.0.0"
 	},
 	"devDependencies": {
-		"@types/node": "^24.7.2",
-		"esbuild": "^0.25.10",
+		"@types/node": "^24.8.1",
+		"esbuild": "^0.25.11",
 		"typedoc": "^0.28.14",
 		"typescript": "^5.9.3",
 		"typescript-eslint": "^8.46.1"

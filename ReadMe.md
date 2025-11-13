@@ -1,5 +1,5 @@
 # ESBuild Plugins
-![Node.js](https://badgen.net/npm/node/@cedx/esbuild-plugins) ![npm](https://badgen.net/npm/v/@cedx/esbuild-plugins) ![License](https://badgen.net/npm/license/@cedx/esbuild-plugins) ![Downloads](https://badgen.net/npm/dt/@cedx/esbuild-plugins)
+![Node.js](https://badgen.net/npm/node/@cedx/esbuild-plugins) ![Npm](https://badgen.net/npm/v/@cedx/esbuild-plugins) ![License](https://badgen.net/npm/license/@cedx/esbuild-plugins) ![Downloads](https://badgen.net/npm/dt/@cedx/esbuild-plugins)
 
 A small collection of [ESBuild](https://esbuild.github.io) plug-ins.
 

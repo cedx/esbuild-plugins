@@ -1,0 +1,6 @@
+<Solution>
+	<Project Path="EsbuildPlugins.esproj">
+		<Build />
+		<Deploy />
+	</Project>
+</Solution>

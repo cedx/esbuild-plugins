@@ -39,8 +39,5 @@
 	},
 	"publishConfig": {
 		"access": "public"
-	},
-	"scripts": {
-		"test": "pwsh Invoke.ps1 Test"
 	}
 }

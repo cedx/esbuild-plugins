@@ -1,4 +1,4 @@
-import {minifyHtmlLiterals} from "@cedx/esbuild-plugins";
+import {minifyHtmlLiterals} from "@cedx/EsbuildPlugins";
 import esbuild from "esbuild";
 import {equal} from "node:assert/strict";
 import {Buffer} from "node:buffer";

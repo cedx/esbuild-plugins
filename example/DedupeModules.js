@@ -1,4 +1,4 @@
-import {dedupeModules} from "@cedx/esbuild-plugins";
+import {dedupeModules} from "@cedx/EsbuildPlugins";
 import esbuild from "esbuild";
 
 const buildOptions = { /* Your configuration. */ };
